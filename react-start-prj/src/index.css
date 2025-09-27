@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'JetB', monospace;
+  src: url(/src/asets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf) format('truetype'),
+       url(/src/asets/fonts/JetBrainsMono-VariableFont_wght.ttf) format('truetype');
+  font-weight: 100 900;
+  font-style: normal italic;
+  font-stretch: 75% 125%;
+}
+
+*{
+  font-family: 'JetB', monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
