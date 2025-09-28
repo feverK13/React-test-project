@@ -1,12 +1,14 @@
-import './App.css'
+import Header from './Header.jsx'
+import Content from './Content.jsx'
+import Footer from './Footer.jsx'
+import './styles/App.css'
 
 function App() {
   return (
     <>
-      <div className='dmnApp'>
-        <h1>HI, that's my first Vite + React page)</h1>
-        <p>Wish to continue developing with that technologies</p>
-      </div>
+      <Header/>
+      <Content/>
+      <Footer/>
     </>
   );
 }
