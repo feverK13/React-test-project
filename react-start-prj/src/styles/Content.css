@@ -1,0 +1,9 @@
+main{
+    height: 100vh;
+    background-color: lightblue;
+    display: grid;
+    flex-direction: column;
+    place-content: center;
+    gap: 16px;
+    text-align: center;
+}

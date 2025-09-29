@@ -2,10 +2,10 @@ import './styles/Header.css'
 
 function Header() {
     return (
-        <header>
+        <header id="header">
             <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
+                <a href="#header">Home</a>
+                <a href="#content">About</a>
                 <a href="#">Contacts</a>
             </nav>
 
