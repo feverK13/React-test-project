@@ -1,6 +1,5 @@
 main{
     height: 100vh;
-    background-color: lightblue;
     display: grid;
     flex-direction: column;
     place-content: center;
