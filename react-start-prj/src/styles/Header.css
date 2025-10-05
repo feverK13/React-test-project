@@ -13,7 +13,7 @@ nav{
     justify-content: center;
     gap: 96px;
     position: fixed;
-    background-color: #67e8fe;
+    background-color: rgba(122, 253, 255, 0.8);
     box-shadow: 0 4px 16px rgba(122, 253, 255, 0.5);
 }
 a{

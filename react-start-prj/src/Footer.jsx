@@ -1,10 +1,33 @@
 import './styles/Footer.css'
 import pilpup from './assets/pilpupPic.jpg'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Footer() {
+    const [visible, setVisible] = useState(false)
+    const lastY = useRef(0)
+
+    useEffect(() => {
+    function onScroll() {
+        const y = window.scrollY || window.pageYOffset
+        const headerEl = document.getElementById('header')
+        const headerH = headerEl ? headerEl.offsetHeight : 0
+
+        if (y < headerH) {
+        setVisible(false)
+        } else {
+        if (y > lastY.current) setVisible(true)
+        else if (y < lastY.current) setVisible(false)
+        }
+        lastY.current = y
+    }
+
+    window.addEventListener('scroll', onScroll)
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+    }, [])
 
     function scrollToTop() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({top: 0});
     }
 
     return (
@@ -20,8 +43,8 @@ export default function Footer() {
                 <input type="email" placeholder='Your email'/>
                 <textarea placeholder='Your message'/>
                 <button type='submit'>Subscribe</button>
-                <button type='button' onClick={scrollToTop}>To Top</button>
             </form>
+            <button className={`toTopBtn ${visible ? 'visible' : ''}`} type='button' onClick={scrollToTop}>To Top</button>
         </footer>
     );
 }
