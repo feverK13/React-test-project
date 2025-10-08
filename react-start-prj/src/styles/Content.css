@@ -1,8 +1,0 @@
-main{
-    height: 100vh;
-    display: grid;
-    flex-direction: column;
-    place-content: center;
-    gap: 16px;
-    text-align: center;
-}

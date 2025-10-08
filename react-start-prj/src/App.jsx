@@ -1,12 +1,12 @@
-import Header from './Header.jsx'
-import Content from './Content.jsx'
-import Footer from './Footer.jsx'
+import Content from './pages/Home'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import './styles/App.css'
 
 function App() {
   return (
     <>
-      <Header/>
+      <Navbar/>
       <Content/>
       <Footer/>
     </>
