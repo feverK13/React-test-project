@@ -1,16 +1,47 @@
-import Content from './pages/Home'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+// імпортувати необхідні компоненти та сторінки
+
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import './styles/App.css'
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: (
+        <ProtectedRoute>
+          <HomePage />
+        </ProtectedRoute>
+        )
+      },
+      {
+        path: 'shop',
+        element: (
+          <ProtectedRoute>
+            <ShopPage />
+          </ProtectedRoute>
+        )
+      },
+      {
+        path: 'about-us',
+        element: <AboutUsPage />
+      }
+    ]
+  },
+  {
+    path: '/auth',
+    element: <AuthPage />
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />
+  }
+])
+
+export default function App() {
   return (
-    <>
-      <Navbar/>
-      <Content/>
-      <Footer/>
-    </>
+    <RouterProvider router={router} />
   );
 }
-
-export default App
