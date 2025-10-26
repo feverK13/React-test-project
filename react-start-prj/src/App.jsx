@@ -1,6 +1,7 @@
 // імпортувати необхідні компоненти та сторінки
 
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
+import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import './styles/App.css'
 
 const router = createBrowserRouter([
