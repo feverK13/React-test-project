@@ -1,19 +1,10 @@
-import '../styles/Home.css'
-
-export default function Content() {
+export default function AboutUsPage() {
     return (
-        <>
-            <header id="header">
-                <div className='welcomeMsg'>
-                    <h1>HI, that's my first Vite + React page)</h1>
-                    <p>Wish to continue developing with that technologies</p>
-                </div>
-            </header>
-            
-            <main id="content">
-                <h2>That's my main content</h2>
-                <p>Soon there will be added carousel, but first of all, I want to test some features. Guess this will be funny</p>
-            </main>
-        </>
+        <div>
+            <h1>Про Нас</h1>
+            <p>Ласкаво просимо до нашої компанії! Ми прагнемо надавати найкращі послуги нашим клієнтам і створювати інноваційні рішення для сучасного світу.</p>
+            <p>Наша команда складається з досвідчених професіоналів, які віддані своїй справі і завжди готові допомогти вам досягти ваших цілей.</p>
+            <p>Дякуємо, що обрали нас!</p>
+        </div>
     );
 }

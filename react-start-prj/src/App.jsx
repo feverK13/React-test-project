@@ -1,7 +1,11 @@
-// імпортувати необхідні компоненти та сторінки
-
+import Layout from './components/layout/Layout';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
-import { ProtectedRoute } from './components/auth/ProtectedRoute';
+import {ProtectedRoute} from './components/auth/ProtectedRoute';
+import HomePage from './pages/HomePage'
+import AboutUsPage from './pages/AboutUsPage'
+import ShopPage from './pages/ShopPage'
+import AuthPage from './pages/AuthPage'
+import NotFoundPage from './pages/NotFoundPage'
 import './styles/App.css'
 
 const router = createBrowserRouter([
@@ -18,7 +22,7 @@ const router = createBrowserRouter([
         )
       },
       {
-        path: 'shop',
+        path: '/shop',
         element: (
           <ProtectedRoute>
             <ShopPage />
@@ -26,7 +30,7 @@ const router = createBrowserRouter([
         )
       },
       {
-        path: 'about-us',
+        path: '/about-us',
         element: <AboutUsPage />
       }
     ]
