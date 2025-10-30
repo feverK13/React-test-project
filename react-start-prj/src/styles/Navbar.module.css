@@ -1,0 +1,41 @@
+.navBar{
+    border-bottom: 4px solid #131313;
+    padding: 24px 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navLogo{
+    color: #131313;
+    text-decoration: none;
+}
+.navLogo:hover{
+    text-decoration: underline;
+}
+.navList{
+    display: flex;
+    gap: 24px;
+    justify-content: space-evenly;
+}
+.navLink, .active, .loginLink{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #131313;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+.navLink:hover, .active:hover, .loginLink:hover{
+    border-color: #2a2a2a;
+    color: #2a2a2a;
+}
+.loginLink{
+    background-color: #131313;
+    color: #fff;
+}
+.loginLink:hover{
+    background-color: #fff;
+}

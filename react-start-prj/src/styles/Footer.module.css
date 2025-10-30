@@ -1,0 +1,33 @@
+.footer{
+    padding: 24px;
+    display: grid;
+    background-color: #131313;
+    justify-items: center;
+    gap: 20px;
+}
+.socials{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+.socialsHeading{
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    color: #fff;
+}
+.socialsList{
+    display: flex;
+    gap: 8px;
+}
+.copyRight{
+    color: #fff;
+}
+.socialLink{
+    color: #fff;
+    transition: color 0.2s ease-in-out;
+}
+.socialLink:hover{
+    color: #2a2a2a;
+    transform: translateY(-4px);
+}
