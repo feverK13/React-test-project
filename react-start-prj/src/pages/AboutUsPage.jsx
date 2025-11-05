@@ -57,19 +57,19 @@ export default function AboutUsPage() {
             </div>
         </main>
 
-        {/* <section>
-            <div>
-                <h2>Маєте ідею? Знайшли баг чи все настільки чудово, що вирішили поділитись враженнями?</h2>
-                <p>
+        <section className='feedback-section'>
+            <div className='feedback-heading'>
+                <h2 className='feedback-title'>Маєте ідею? Знайшли баг чи все настільки чудово, що вирішили поділитись враженнями?</h2>
+                <p className='feedback-subtitle'>
                     Заповнюйте форму, я читаю кожен відгук
                 </p>
             </div>
-            <form>
-                <input type="text" name="name" placeholder="Ваше ім'я" />
-                <input type="email" name="email" placeholder="Ваш Email" />
-                <textarea name="message" placeholder="Ваше повідомлення..." />
+            <form className='feedback-form'>
+                <input className='form-input input-name' type="text" name="name" placeholder="Ваше ім'я" />
+                <input className='form-input input-email' type="email" name="email" placeholder="Ваш Email" />
+                <textarea className='form-input input-message' name="message" placeholder="Ваше повідомлення..." />
             </form>
-        </section> */}
+        </section>
     </div>
     );
 }
