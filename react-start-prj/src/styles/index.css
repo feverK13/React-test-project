@@ -6,8 +6,24 @@
   font-style: normal italic;
   font-stretch: 75% 125%;
 }
+@font-face {
+  font-family: 'Anbu';
+  src: url(/src/assets/fonts/Unbounded-VariableFont_wght.ttf) format('truetype');
+  font-weight: 100 900;
+  font-style: normal italic;
+}
 
 *{
   font-family: 'JetB', monospace;
-  box-sizing: border-box;
+}
+
+:root{
+  --color-white: #fcfcfc;
+  --color-black: #131313;
+  --color-gray: #2a2a2a;
+
+  --navbar-height: 80px;
+
+  --font-txt: 'JetB', monospace;
+  --font-heading: 'Anbu';
 }

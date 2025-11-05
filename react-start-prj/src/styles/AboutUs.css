@@ -1,0 +1,150 @@
+.aboutUsBody{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    justify-content: center;
+}
+header{
+    padding-top: var(--navbar-height);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+.header-title{
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Anbu';
+    font-weight: 500;
+}
+.header-subtitle{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'JetB', monospace;
+}
+main{
+    display: grid;
+    gap: 64px;
+}
+.story-section{
+    padding-top: var(--navbar-height);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.story-title{
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Anbu';
+}
+.story-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.story-block{
+    display: grid;
+    align-content: start;
+    gap: 12px;
+}
+.story-subtitle{
+    font-size: 16px;
+    font-family: 'Anbu';
+}
+.creator-section{
+    padding-top: var(--navbar-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    outline: 1px solid red;
+}
+.creator-title{
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Anbu';
+}
+.creator-card{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 24px;
+}
+.creator-pic{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-position: 0 0;
+    object-fit: cover;
+    filter: saturate(0);
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.creator-name{
+    font-size: 24px;
+    font-family: 'Anbu';
+}
+.creator-quote{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.quote{
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Anbu';
+}
+
+
+
+@media (min-width: 768px){
+    .aboutUsBody{
+        padding: 0 24px;
+        max-width: 1440px;
+    }
+    .header-title{
+        font-size: 80px;
+    }
+    .header-subtitle{
+        font-size: 20px;
+    }
+    .story-section{
+        outline: 1px solid blue;
+        height: 100vh;
+        justify-content: center;
+    }
+    .story-content{
+        display: grid;
+        align-items: start;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .story-title{
+        font-size: 48px;
+    }
+    .story-block{
+        height: 100%;
+        padding: 16px;
+        border: 2px solid var(--color-black);
+    }
+    .story-subtitle{
+        font-size: 20px;
+    }
+    .creator-section{
+        height: 100vh;
+        justify-content: flex-end;
+    }
+    .creator-card{
+        grid-template-columns: minmax(0, 540px) minmax(0, 672px);
+        justify-content: center;
+        align-items: center;
+    }
+    .creator-pic{
+        max-width: 100%;
+    }
+}

@@ -10,38 +10,38 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navBar}>
-        <NavLink to='/' className={styles.navLogo}>
-          Arete
-        </NavLink>
-
-        <ul className={styles.navList}>
-          {isLoggedIn && (
-            <>
-              <li className={styles.listItem}>
-                <NavLink to='/' className={getNavLinkClass}>Головна</NavLink>
-              </li>
-              <li className={styles.listItem}>
-                <NavLink to='/shop' className={getNavLinkClass}>Магазин</NavLink>
-              </li>
-            </>
-          )}
-
-          <li className={styles.listItem}>
-            <NavLink to='/about-us' className={getNavLinkClass}>Про Нас</NavLink>
-          </li>
-
-          {!isLoggedIn && (
+      <NavLink to='/' className={styles.navLogo}>
+        Arete
+      </NavLink>
+      
+      <ul className={styles.navList}>
+        {isLoggedIn && (
+          <>
             <li className={styles.listItem}>
-              <NavLink to='/auth' className={`${getNavLinkClass} ${styles.loginLink}`}>Увійти</NavLink>
+              <NavLink to='/' className={getNavLinkClass}>Головна</NavLink>
             </li>
-          )}
+            <li className={styles.listItem}>
+              <NavLink to='/shop' className={getNavLinkClass}>Магазин</NavLink>
+            </li>
+          </>
+        )}
 
-          {isLoggedIn && (
-            <li className={`${styles.listItem} ${styles.exitBut}`}>
-              <button onClick={logout} className='logoutBut'>Вихід</button>
-            </li>
-          )}
-        </ul>
+        <li className={styles.listItem}>
+          <NavLink to='/about-us' className={getNavLinkClass}>Про Нас</NavLink>
+        </li>
+        
+        {!isLoggedIn && (
+          <li className={styles.listItem}>
+            <NavLink to='/auth' className={`${getNavLinkClass} ${styles.loginLink}`}>Увійти</NavLink>
+          </li>
+        )}
+
+        {isLoggedIn && (
+          <li className={`${styles.listItem} ${styles.exitBut}`}>
+            <button onClick={logout} className='logoutBut'>Вихід</button>
+          </li>
+        )}
+      </ul>
     </nav>
   )
 }

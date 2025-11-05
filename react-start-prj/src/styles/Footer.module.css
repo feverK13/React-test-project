@@ -1,4 +1,6 @@
 .footer{
+    margin-top: 40px;
+    width: 100%;
     padding: 24px;
     display: grid;
     background-color: #131313;
@@ -21,6 +23,7 @@
     gap: 8px;
 }
 .copyRight{
+    text-align: center;
     color: #fff;
 }
 .socialLink{
