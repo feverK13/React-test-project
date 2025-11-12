@@ -1,5 +1,5 @@
 .footer{
-    margin-top: 40px;
+    margin-top: var(--navbar-height);
     width: 100%;
     padding: 24px;
     display: grid;
