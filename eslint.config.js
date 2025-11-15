@@ -24,6 +24,24 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      // 'react-jsx-key': 'warn', - поки не використовую .map
+      'no-undef': 'error',
+      'no-unused-vars': ['warn', { 
+        args: 'after-used',
+        ignoreRestSiblings: true ,
+        'gsIgnorePattern': '^_'
+        }], //перечитати пояснення
+      'eqeqeq': ['error', 'always'], //суворе прирівнення ( ==, != ...)
+      'no-var': 'error',
+      'prefer-const': 'warn',
+      'no-console': ['warn', { 'allow': ['warn', 'error'] }],
+
+      // стилістичні правила
+      'react/jsx-curly-brace-presence': ['warn', 'never'],
+      'no-extra-semi': 'error',
     },
+    prettierConfig
   },
 ])
