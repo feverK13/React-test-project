@@ -23,12 +23,12 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // 'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       // 'react-jsx-key': 'warn', - поки не використовую .map
       'no-undef': 'error',
-      'no-unused-vars': ['warn', { 
+      'no-unused-vars': ['error', { 
         args: 'after-used',
         ignoreRestSiblings: true ,
         'gsIgnorePattern': '^_'
@@ -40,7 +40,7 @@ export default defineConfig([
 
       // стилістичні правила
       'react/jsx-curly-brace-presence': ['warn', 'never'],
-      'no-extra-semi': 'error',
+      'no-extra-semi': 'warn',
     },
     prettierConfig
   },
