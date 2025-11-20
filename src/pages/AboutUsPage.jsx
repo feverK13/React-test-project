@@ -1,7 +1,52 @@
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/AboutUs.css';
 import creatorPhoto from '../assets/images/creator-pic.jpg'
 
 export default function AboutUsPage() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const formRef = useRef();
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }))
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!formData.name || !formData.email || !formData.message) {
+        alert('Будь ласка, заповніть усі поля');
+        return;
+        };
+        setIsLoading(true);
+
+        emailjs.sendForm(
+            'service_guq3avb',
+            'template_z5257sq',
+            formRef.current,
+            '4G3Y-GzxavTlwpiqB'
+        )
+        .then((result) => {
+            console.log(result.text)
+            alert('Дякуємо за відгук!')
+            setFormData({ name: '', email: '', message: '' })
+        })
+        .catch((error) => {
+            console.log(error.text)
+            alert('Сталася помилка. Будь ласка, повторіть пізніше. . .')
+        })
+        .finally(() => setIsLoading(false))
+    }
+
     return (
     <div className='aboutUsBody'>
         <div className='aboutUs-header'>
@@ -60,11 +105,11 @@ export default function AboutUsPage() {
                         Заповнюйте форму, я читаю кожен відгук
                     </p>
                 </div>
-                <form className='feedback-form'>
-                    <input className='form-input input-name' type="text" name="name" placeholder="Ваше ім'я" />
-                    <input className='form-input input-email' type="email" name="email" placeholder="Ваш Email" />
-                    <textarea className='form-input input-message' name="message" placeholder="Ваше повідомлення..." />
-                    <button className='form-input form-submit' type="submit">Надіслати</button>
+                <form className='feedback-form' ref={formRef} onSubmit={handleSubmit}>
+                    <input className='form-input input-name' type="text" name="name" value={formData.name}  onChange={handleChange} placeholder="Ваше ім'я" />
+                    <input className='form-input input-email' type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Ваш Email" />
+                    <textarea className='form-input input-message' name="message" value={formData.message} onChange={handleChange} placeholder="Ваше повідомлення..." />
+                    <button className='form-input form-submit' disabled={isLoading} type="submit">Надіслати</button>
                 </form>
             </section>
         </div>

@@ -8,5 +8,7 @@
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
   "printWidth": 100,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "plugins": ["prettier-plugin-css-order"],
+  "cssDeclarationSorterOrder": "concentric-css"
 }
