@@ -13,17 +13,17 @@
   gap: 12px;
 }
 .socialsHeading {
-  color: #fff;
+  color: var(--color-white);
   font-style: italic;
   font-weight: 600;
-  font-size: 20px;
+  font-size: var(--font-lg);
 }
 .socialsList {
   display: flex;
   gap: 12px;
 }
 .copyRight {
-  color: #fff;
+  color: var(--color-white);
   text-align: center;
 }
 .socialLink {

@@ -5,8 +5,6 @@
   gap: 64px;
   margin: 0 auto;
   padding: 0 16px;
-  /* overflow: y-scroll;
-    scroll-snap-type: y mandatory; */
 }
 .aboutUsBody > .aboutUs-header,
 .aboutUsBody > .aboutUs-story,
@@ -24,13 +22,13 @@
 }
 .header-title {
   font-weight: 500;
-  font-size: 48px;
-  font-family: 'Anbu';
+  font-size: var(--font-3xl);
+  font-family: var(--font-heading);
   text-align: center;
 }
 .header-subtitle {
-  font-size: 20px;
-  font-family: 'JetB', monospace;
+  font-size: var(--font-lg);
+  font-family: var(--font-txt);
   text-align: center;
 }
 
@@ -41,8 +39,8 @@
   padding-top: var(--navbar-height);
 }
 .story-title {
-  font-size: 36px;
-  font-family: 'Anbu';
+  font-size: var(--font-2xl);
+  font-family: var(--font-heading);
   text-align: center;
 }
 .story-content {
@@ -57,8 +55,8 @@
   gap: 12px;
 }
 .story-subtitle {
-  font-size: 18px;
-  font-family: 'Anbu';
+  font-size: var(--font-md);
+  font-family: var(--font-heading);
 }
 
 .aboutUs-creator {
@@ -70,8 +68,8 @@
   padding-top: var(--navbar-height);
 }
 .creator-title {
-  font-size: 36px;
-  font-family: 'Anbu';
+  font-size: var(--font-2xl);
+  font-family: var(--font-heading);
   text-align: center;
 }
 .creator-card {
@@ -93,8 +91,8 @@
   gap: 20px;
 }
 .creator-name {
-  font-size: 24px;
-  font-family: 'Anbu';
+  font-size: var(--font-xl);
+  font-family: var(--font-heading);
 }
 .creator-quote {
   display: flex;
@@ -102,8 +100,8 @@
   gap: 8px;
 }
 .quote {
-  font-size: 12px;
-  font-family: 'Anbu';
+  font-size: var(--font-xs);
+  font-family: var(--font-heading);
   text-align: center;
 }
 
@@ -130,14 +128,14 @@
   max-width: 720px;
 }
 .feedback-title {
-  font-size: 28px;
-  font-family: 'Anbu';
+  font-size: var(--font-xl);
+  font-family: var(--font-heading);
   text-align: center;
 }
 .feedback-subtitle {
   font-style: italic;
-  font-size: 16px;
-  font-family: 'Anbu';
+  font-size: var(--font-base);
+  font-family: var(--font-heading);
   text-align: center;
 }
 .feedback-form {
@@ -152,8 +150,8 @@
   width: 100%;
   resize: none;
   color: var(--color-black);
-  font-size: 16px;
-  font-family: 'JetB', monospace;
+  font-size: var(--font-base);
+  font-family: var(--font-txt);
 }
 .input-message {
   height: 120px;
@@ -164,23 +162,25 @@
   background-color: var(--color-black);
   color: var(--color-white);
   font-weight: 500;
-  font-size: 18px;
+  font-size: var(--font-md);
 }
 .form-submit:hover {
   background-color: var(--color-white);
   color: var(--color-black);
 }
-
+/* ---------------------------------------------------- */
+/* ---------------- Responsive Styles ----------------- */
+/* ---------------------------------------------------- */
 @media (min-width: 768px) {
   .aboutUsBody {
     padding: 0 24px;
     max-width: 1440px;
   }
   .header-title {
-    font-size: 80px;
+    font-size: var(--font-4xl);
   }
   .header-subtitle {
-    font-size: 24px;
+    font-size: var(--font-xl);
   }
   .aboutUs-story {
     justify-content: center;
@@ -193,7 +193,7 @@
     gap: 24px;
   }
   .story-title {
-    font-size: 48px;
+    font-size: var(--font-3xl);
   }
   .story-block {
     border: 2px solid var(--color-black);
@@ -201,14 +201,14 @@
     height: 100%;
   }
   .story-subtitle {
-    font-size: 20px;
+    font-size: var(--font-lg);
   }
   .aboutUs-creator {
     justify-content: flex-end;
     height: 100vh;
   }
   .creator-title {
-    font-size: 48px;
+    font-size: var(--font-3xl);
   }
   .creator-card {
     grid-template-columns: minmax(0, 540px) minmax(0, 672px);
@@ -219,10 +219,10 @@
     max-width: 100%;
   }
   .creator-name {
-    font-size: 32px;
+    font-size: var(--font-2xl);
   }
   .quote {
-    font-size: 16px;
+    font-size: var(--font-base);
   }
   .feedback-wrapper {
     margin: 0;

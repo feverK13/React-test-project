@@ -6,9 +6,15 @@
   "useTabs": false,
   "trailingComma": "es5",
   "bracketSpacing": true,
-  "jsxBracketSameLine": false,
+  "bracketSameLine": false,
   "printWidth": 100,
   "arrowParens": "avoid",
-  "plugins": ["prettier-plugin-css-order"],
-  "cssDeclarationSorterOrder": "concentric-css"
+  "cssDeclarationSorterOrder": "concentric-css",
+  "endOfLine": "lf",
+  "quoteProps": "as-needed",
+
+  "plugins": ["prettier-plugin-css-order", "@trivago/prettier-plugin-sort-imports"],
+  "importOrder": ["^react", "^[a-zA-Z]", "^@/", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

@@ -14,12 +14,6 @@
   font-family: 'Anbu';
 }
 
-* {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  font-family: 'JetB', monospace;
-}
-
 :root {
   --color-white: #fcfcfc;
   --color-black: #131313;
@@ -30,4 +24,36 @@
 
   --font-txt: 'JetB', monospace;
   --font-heading: 'Anbu';
+
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-base: 16px;
+  --font-md: 18px;
+  --font-lg: 20px;
+  --font-xl: 28px;
+  --font-2xl: 36px;
+  --font-3xl: 48px;
+  --font-4xl: 80px;
+}
+
+* {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  color: var(--color-black);
+  line-height: 1.4;
+  font-family: var(--font-txt);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.24;
+  font-family: var(--font-heading);
 }

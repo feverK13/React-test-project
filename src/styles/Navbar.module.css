@@ -1,46 +1,51 @@
-.navBar{
-    z-index: 3;
-    position: fixed;
-    top: 0;
-    height: var(--navbar-height);
-    border-bottom: 4px solid var(--color-black);
-    padding: 0 24px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.9);
+.navBar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  border-bottom: 4px solid var(--color-black);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 24px;
+  width: 100%;
+  height: var(--navbar-height);
 }
-.navLogo{
-    color: var(--color-black);
-    text-decoration: none;
+.navLogo {
+  color: var(--color-black);
+  text-decoration: none;
 }
-.navLogo:hover{
-    text-decoration: underline;
+.navLogo:hover {
+  text-decoration: underline;
 }
-.navList{
-    display: flex;
-    gap: 24px;
-    justify-content: space-evenly;
+.navList {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 24px;
 }
-.navLink, .active, .loginLink{
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--color-black);
-    padding: 8px 16px;
-    border: 2px solid transparent;
-    transition: border-color 0.2s ease-in-out,
+.navLink,
+.active,
+.loginLink {
+  transition:
+    border-color 0.2s ease-in-out,
     color 0.2s ease-in-out;
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  color: var(--color-black);
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
 }
-.navLink:hover, .active:hover, .loginLink:hover{
-    border-color: var(--color-grey);
-    color: var(--color-grey);
+.navLink:hover,
+.active:hover,
+.loginLink:hover {
+  border-color: var(--color-grey);
+  color: var(--color-grey);
 }
-.loginLink{
-    background-color: var(--color-black);
-    color: var(--color-white);
+.loginLink {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
-.loginLink:hover{
-    background-color: var(--color-white);
+.loginLink:hover {
+  background-color: var(--color-white);
 }

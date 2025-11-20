@@ -1,25 +1,26 @@
-import Layout from './components/layout/Layout';
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
-import {ProtectedRoute} from './components/auth/ProtectedRoute';
-import HomePage from './pages/HomePage'
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
+
+import { ProtectedRoute } from './components/auth/ProtectedRoute'
+import Layout from './components/layout/Layout'
 import AboutUsPage from './pages/AboutUsPage'
-import ShopPage from './pages/ShopPage'
 import AuthPage from './pages/AuthPage'
+import HomePage from './pages/HomePage'
 import NotFoundPage from './pages/NotFoundPage'
+import ShopPage from './pages/ShopPage'
 import './styles/App.css'
 
 const router = createBrowserRouter([
   {
-    path:'/',
+    path: '/',
     element: <Layout />,
     children: [
       {
         index: true,
         element: (
-        <ProtectedRoute>
-          <HomePage />
-        </ProtectedRoute>
-        )
+          <ProtectedRoute>
+            <HomePage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: '/shop',
@@ -27,26 +28,24 @@ const router = createBrowserRouter([
           <ProtectedRoute>
             <ShopPage />
           </ProtectedRoute>
-        )
+        ),
       },
       {
         path: '/about-us',
-        element: <AboutUsPage />
-      }
-    ]
+        element: <AboutUsPage />,
+      },
+    ],
   },
   {
     path: '/auth',
-    element: <AuthPage />
+    element: <AuthPage />,
   },
   {
     path: '*',
-    element: <NotFoundPage />
-  }
+    element: <NotFoundPage />,
+  },
 ])
 
 export default function App() {
-  return (
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />
 }
