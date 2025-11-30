@@ -7,7 +7,6 @@ import AuthPage from './pages/AuthPage'
 import HomePage from './pages/HomePage'
 import NotFoundPage from './pages/NotFoundPage'
 import ShopPage from './pages/ShopPage'
-import './styles/App.css'
 
 const router = createBrowserRouter([
   {

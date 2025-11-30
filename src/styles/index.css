@@ -38,14 +38,13 @@
 
 * {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  font-family: var(--font-txt);
 }
 
-body {
-  color: var(--color-black);
-  line-height: 1.4;
-  font-family: var(--font-txt);
+html {
+  scroll-snap-type: y mandatory;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
 }
 
 h1,
@@ -56,4 +55,10 @@ h5,
 h6 {
   line-height: 1.24;
   font-family: var(--font-heading);
+}
+input,
+code,
+textarea,
+button {
+  letter-spacing: 1px;
 }

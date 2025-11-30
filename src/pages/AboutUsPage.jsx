@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser'
 import { useRef, useState } from 'react'
 
 import creatorPhoto from '../assets/images/creator-pic.jpg'
+import Button from '../components/ui/Button.jsx'
+import Input from '../components/ui/Input.jsx'
 import '../styles/AboutUs.css'
 
 export default function AboutUsPage() {
@@ -26,7 +28,7 @@ export default function AboutUsPage() {
     e.preventDefault()
 
     if (!formData.name || !formData.email || !formData.message) {
-      alert('Будь ласка, заповніть усі поля')
+      alert('Будь ласка, заповніть всі поля')
       return
     }
     setIsLoading(true)
@@ -46,7 +48,7 @@ export default function AboutUsPage() {
   }
 
   return (
-    <div className='aboutUsBody'>
+    <div className='aboutUs-container'>
       <div className='aboutUs-header'>
         <h1 className='header-title'>Про Arete та її творця</h1>
         <p className='header-subtitle'>
@@ -77,7 +79,7 @@ export default function AboutUsPage() {
             </p>
           </article>
           <article className='story-block'>
-            <h3 className='story-subtitle'>А що буде потім?</h3>
+            <h3 className='story-subtitle'>Що буде потім?</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero, rem repellat
               inventore blanditiis cupiditate reprehenderit ad veritatis necessitatibus architecto
@@ -125,16 +127,16 @@ export default function AboutUsPage() {
             <p className='feedback-subtitle'>Заповнюйте форму, я читаю кожен відгук</p>
           </div>
           <form className='feedback-form' ref={formRef} onSubmit={handleSubmit}>
-            <input
-              className='form-input input-name'
+            <Input
+              className=' input-name'
               type='text'
               name='name'
               value={formData.name}
               onChange={handleChange}
               placeholder="Ваше ім'я"
             />
-            <input
-              className='form-input input-email'
+            <Input
+              className=' input-email'
               type='email'
               name='email'
               value={formData.email}
@@ -148,9 +150,7 @@ export default function AboutUsPage() {
               onChange={handleChange}
               placeholder='Ваше повідомлення...'
             />
-            <button className='form-input form-submit' disabled={isLoading} type='submit'>
-              Надіслати
-            </button>
+            <Button disabled={isLoading} children='Надіслати' />
           </form>
         </section>
       </div>
