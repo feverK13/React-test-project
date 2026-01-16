@@ -10,6 +10,7 @@
   padding: 0 24px;
   width: 100%;
   height: var(--navbar-height);
+  scroll-snap-align: start;
 }
 .navLogo {
   color: var(--color-black);
@@ -18,10 +19,23 @@
 .navLogo:hover {
   text-decoration: underline;
 }
+.burgerIcon {
+  cursor: pointer;
+}
 .navList {
+  display: none;
+}
+.navListMenu {
   display: flex;
-  justify-content: space-evenly;
+  position: absolute;
+  top: var(--navbar-height);
+  right: 0;
+  flex-direction: column;
+  align-items: center;
   gap: 24px;
+  outline: 2px solid var(--color-black);
+  background-color: var(--color-white);
+  padding: 16px;
 }
 .navLink,
 .active,
@@ -48,4 +62,18 @@
 }
 .loginLink:hover {
   background-color: var(--color-white);
+}
+/* ---------------------------------------------------- */
+/* ---------------- Responsive Styles ----------------- */
+/* ---------------------------------------------------- */
+@media (min-width: 768px) {
+  .navList {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 24px;
+  }
+  .burgerIcon {
+    display: none;
+  }
 }

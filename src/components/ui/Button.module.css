@@ -22,3 +22,19 @@
   background-color: var(--color-black);
   color: var(--color-white);
 }
+.navItemButton {
+  transition:
+    border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  border: 2px solid var(--color-black);
+  background-color: var(--color-white);
+  padding: 8px 16px;
+  color: var(--color-black);
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+.navItemButton:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
