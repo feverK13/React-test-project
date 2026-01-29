@@ -1,4 +1,4 @@
-import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import { ProtectedRoute } from './components/auth/ProtectedRoute'
 import Layout from './components/layout/Layout'

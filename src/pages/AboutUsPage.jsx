@@ -5,7 +5,7 @@ import { useRef, useState } from 'react'
 import creatorPhoto from '../assets/images/creator-pic.jpg'
 import Button from '../components/ui/Button.jsx'
 import Input from '../components/ui/Input.jsx'
-import '../styles/AboutUs.css'
+import styles from '../styles/AboutUs.module.css'
 
 export default function AboutUsPage() {
   const [formData, setFormData] = useState({
@@ -48,19 +48,19 @@ export default function AboutUsPage() {
   }
 
   return (
-    <div className='aboutUs-container'>
-      <div className='aboutUs-header'>
-        <h1 className='header-title'>Про Arete та її творця</h1>
-        <p className='header-subtitle'>
+    <div className={styles.aboutUsContainer}>
+      <div className={styles.aboutUsHeader}>
+        <h1 className={styles.headerTitle}>Про Arete та її творця</h1>
+        <p className={styles.headerSubtitle}>
           Як пристрасть до ігор та бажання розвиватись стали одним цілим
         </p>
       </div>
 
-      <div className='aboutUs-story'>
-        <h2 className='story-title'>Історія Arete</h2>
-        <div className='story-content'>
-          <article className='story-block'>
-            <h3 className='story-subtitle'>Що запалило ідею?</h3>
+      <div className={styles.aboutUsStory}>
+        <h2 className={styles.storyTitle}>Історія Arete</h2>
+        <div className={styles.storyContent}>
+          <article className={styles.storyBlock}>
+            <h3 className={styles.storySubtitle}>Що запалило ідею?</h3>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, aspernatur odio
               earum impedit incidunt necessitatibus laudantium deserunt officiis reprehenderit!
@@ -69,8 +69,8 @@ export default function AboutUsPage() {
               perferendis.
             </p>
           </article>
-          <article className='story-block'>
-            <h3 className='story-subtitle'>Від концепції до реалізації</h3>
+          <article className={styles.storyBlock}>
+            <h3 className={styles.storySubtitle}>Від концепції до реалізації</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi animi ipsa voluptatem
               aperiam officiis iste tempore adipisci amet. Similique ullam ipsam voluptas ab,
@@ -78,8 +78,8 @@ export default function AboutUsPage() {
               dignissimos nihil dolore autem nemo!
             </p>
           </article>
-          <article className='story-block'>
-            <h3 className='story-subtitle'>Що буде потім?</h3>
+          <article className={styles.storyBlock}>
+            <h3 className={styles.storySubtitle}>Що буде потім?</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero, rem repellat
               inventore blanditiis cupiditate reprehenderit ad veritatis necessitatibus architecto
@@ -90,13 +90,13 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <div className='aboutUs-creator'>
-        <h2 className='creator-title'>Знайомтесь з творцем</h2>
-        <div className='creator-card'>
-          <img src={creatorPhoto} alt='Creators photo' className='creator-pic' />
-          <div className='card-content'>
-            <h3 className='creator-name'>Крушельницький Ігор</h3>
-            <p className='creator-info'>
+      <div className={styles.aboutUsCreator}>
+        <h2 className={styles.creatorTitle}>Знайомтесь з творцем</h2>
+        <div className={styles.creatorCard}>
+          <img src={creatorPhoto} alt='Creators photo' className={styles.creatorPic} />
+          <div className={styles.cardContent}>
+            <h3 className={styles.creatorName}>Крушельницький Ігор</h3>
+            <p className={styles.creatorInfo}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id libero incidunt optio,
               aut neque, expedita commodi dignissimos sint ab facilis reiciendis laboriosam aliquid
               odit! Dignissimos ea, repellendus in maiores ullam, eligendi molestias harum, optio
@@ -105,30 +105,30 @@ export default function AboutUsPage() {
               ea odio similique earum vitae itaque. Ducimus nobis quo omnis et distinctio, eius illo
               praesentium dicta debitis!
             </p>
-            <div className='creator-quote'>
+            <div className={styles.creatorQuote}>
               <svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24'>
                 <path
                   fill='#131313'
                   d='M13.222 3H23v10l-4 7h-3l3-7h-5.778zM1 3h9.778v10L7 20H4l3-7H1z'
                 />
               </svg>
-              <p className='quote'>Bla bla bla, any txt dropped from somewhere. . .</p>
+              <p className={styles.quote}>Bla bla bla, any txt dropped from somewhere. . .</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className='feedback-wrapper'>
-        <section className='feedback-section'>
-          <div className='feedback-heading'>
-            <h2 className='feedback-title'>
+      <div className={styles.feedbackWrapper}>
+        <section className={styles.feedbackSection}>
+          <div className={styles.feedbackHeading}>
+            <h2 className={styles.feedbackTitle}>
               Маєте ідею? Знайшли баг чи все настільки чудово, що вирішили поділитись враженнями?
             </h2>
-            <p className='feedback-subtitle'>Заповнюйте форму, я читаю кожен відгук</p>
+            <p className={styles.feedbackSubtitle}>Заповнюйте форму, я читаю кожен відгук</p>
           </div>
-          <form className='feedback-form' ref={formRef} onSubmit={handleSubmit}>
+          <form className={styles.feedbackForm} ref={formRef} onSubmit={handleSubmit}>
             <Input
-              className=' input-name'
+              className={styles.inputName}
               type='text'
               name='name'
               value={formData.name}
@@ -136,7 +136,7 @@ export default function AboutUsPage() {
               placeholder="Ваше ім'я"
             />
             <Input
-              className=' input-email'
+              className={styles.inputEmail}
               type='email'
               name='email'
               value={formData.email}
@@ -144,7 +144,7 @@ export default function AboutUsPage() {
               placeholder='Ваш Email'
             />
             <textarea
-              className='form-input input-message'
+              className={`${styles.formInput} ${styles.inputMessage}`}
               name='message'
               value={formData.message}
               onChange={handleChange}

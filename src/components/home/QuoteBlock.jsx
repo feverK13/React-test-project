@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { quotes } from '../../data/quotes'
-import './QuoteBlock.css'
+import styles from './QuoteBlock.module.css'
 
 export default function QuoteBlock() {
   const [quoteId, setQuoteId] = useState(0)
@@ -13,9 +13,9 @@ export default function QuoteBlock() {
   let currentQuote = quotes[quoteId]
 
   return (
-    <div className='quoteBlock'>
-      <p className='quoteText'>“{currentQuote.text}”</p>
-      <p className='quoteAuthor'>- {currentQuote.author}</p>
+    <div className={styles.quoteBlock}>
+      <p className={styles.quoteText}>“{currentQuote.text}”</p>
+      <p className={styles.quoteAuthor}>— {currentQuote.author}</p>
     </div>
   )
 }

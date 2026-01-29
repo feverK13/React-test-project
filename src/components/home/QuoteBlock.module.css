@@ -1,0 +1,19 @@
+.quoteBlock {
+  display: grid;
+  align-items: center;
+  gap: 16px;
+  border: 2px solid var(--color-black);
+  border-right-width: 16px;
+  padding: 16px;
+}
+.quoteText {
+  font-size: var(--font-base);
+  line-height: 1.24;
+  font-family: var(--font-heading);
+  text-align: center;
+}
+.quoteAuthor {
+  font-size: var(--font-sm);
+  font-family: var(--font-heading);
+  text-align: right;
+}
