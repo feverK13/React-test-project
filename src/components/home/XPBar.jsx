@@ -1,16 +1,23 @@
-import { useState } from 'react'
-
 import styles from './XPBar.module.css'
 
-export default function XPBar({ updateXp, currentLvl }) {
+export default function XPBar({ currentXp, currentLvl }) {
+  const maxXp = Math.round(100 * Math.pow(1.25, currentLvl))
+  const fillPercentage = Math.min((currentXp / maxXp) * 100, 100)
   return (
-    <div className={styles.xpBarFrame}>
-      <div className={styles.xpStats}>
-        <p className={styles.levelStat}></p>
-        <p className={styles.totalXpStat}></p>
+    <div className={styles.xpBarBlock}>
+      <div className={styles.stats}>
+        <p className={styles.statInfo}>
+          Your LvL:{'  '}
+          <span style={{ fontSize: 'var(--font-base)', fontWeight: 800 }}>{currentLvl}</span>
+        </p>
+        <p className={styles.statInfo}>
+          {currentXp} / {maxXp}
+        </p>
       </div>
 
-      <div className={styles.xpFill}></div>
+      <div className={styles.xpFillFrame}>
+        <div className={styles.xpFill} style={{ width: `${fillPercentage}%` }}></div>
+      </div>
     </div>
   )
 }

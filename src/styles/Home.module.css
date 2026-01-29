@@ -45,6 +45,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     align-content: center;
+    max-width: 1440px;
   }
   .headerTitle {
     font-size: var(--font-4xl);

@@ -1,0 +1,27 @@
+.xpBarBlock {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 8px;
+  margin: 32px 0;
+  border: 2px solid var(--color-black);
+  padding: 16px 24px;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.statInfo {
+  font-weight: 600;
+  font-size: var(--font-sm);
+  font-family: var(--font-heading);
+}
+.xpFillFrame {
+  outline: 2px solid var(--color-black);
+  width: 100%;
+}
+.xpFill {
+  transition: width 0.5s ease-in-out;
+  background-color: var(--color-black);
+  height: 24px;
+}
